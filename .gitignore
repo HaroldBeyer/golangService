@@ -21,3 +21,4 @@ vendor
 *.out
 
 terraform/.terraform
+go.sum

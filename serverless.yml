@@ -1,24 +1,16 @@
 service: golangservice
 frameworkVersion: '3'
+
 provider:
   name: aws
   runtime: go1.x
+  region: us-east-1
 
 package:
   patterns:
     - '!./**'
     - ./bin/**
+    - ./functions/**
 
 functions:
-  hello:
-    handler: bin/hello
-    events:
-      - httpApi:
-          path: /hello
-          method: get
-  world:
-    handler: bin/world
-    events:
-      - httpApi:
-          path: /world
-          method: get
+  ${file(./functions/hello/_handlers.yml)}
