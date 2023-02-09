@@ -1,7 +1,5 @@
 name: Main Workflow
 
-version: 0.2
-
 env:
   AWS_REGION: us-east-1
 
