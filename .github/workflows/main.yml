@@ -21,11 +21,11 @@ jobs:
           go get -v -t -d ./...
 
       - name: Deploy Serverless Framework
-        uses: AWS-actions/aws-serverless-deployment-action@v1
+        uses: serverless/github-action@v3.1
         with:
           region: ${{ env.AWS_REGION }}
-          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           stage: production
           source_location: 'serverless'
 
