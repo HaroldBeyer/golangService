@@ -2,6 +2,7 @@ name: Main Workflow
 
 env:
   AWS_REGION: us-east-1
+  SLS_INTERACTIVE_SETUP_ENABLE: '1'
 
 jobs:
   build:
