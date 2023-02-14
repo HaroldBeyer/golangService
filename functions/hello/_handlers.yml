@@ -6,6 +6,6 @@ hello:
         method: get
 
 helloSns:
-  handler: helloSns
+  handler: functions/hello/helloSns
   events:
     - sns: hello-world-topic
