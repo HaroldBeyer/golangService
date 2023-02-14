@@ -3,7 +3,7 @@ terraform {
 
   backend "s3" {
     bucket = "golang-test-haroldo"
-    key = "terraform/bucket/key"
+    key    = "terraform/bucket/key"
     region = "us-east-1"
   }
 }
