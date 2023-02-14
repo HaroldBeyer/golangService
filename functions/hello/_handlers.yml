@@ -5,7 +5,7 @@ hello:
         path: hello/{name}
         method: get
 
- helloSns:
-    handler: helloSns
-    events:
-      - sns: hello-world-topic
+helloSns:
+  handler: helloSns
+  events:
+    - sns: hello-world-topic
