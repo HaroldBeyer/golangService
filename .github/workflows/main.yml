@@ -23,13 +23,11 @@ jobs:
         run: |
           go get -v -t -d ./...
 
-      - name: Deploy Terraform
-        uses: hashicorp/terraform-github-actions@v1
+      - name: Terraform Apply
+        uses: hashicorp/terraform-github-actions@v2
         with:
-          terraform_version: 0.14.3
-          working_directory: terraform
-          command: apply
-          auto_approve: true
+          args: apply -auto-approve
+          tfworking-dir: terraform
 
       - name: Deploy Serverless Framework
         uses: serverless/github-action@v3.1
